@@ -10,75 +10,75 @@ RESET=$(tput sgr0)
 
 prompt_confirm() {
     echo
-    read -p "${YELLOW}Are you sure? [Y/n]: ${RESET}" confirm
+    read -p "Are you sure? [Y/n]: " confirm
     confirm=${confirm,,} # lowercase
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
         return 0
     else
-        echo "${RED}Aborted by user.${RESET}"
+        echo "Aborted by user."
         exit 1
     fi
 }
 
 reboot_prompt() {
     echo
-    read -p "${GREEN}Changes applied. Reboot now? [Y/n]: ${RESET}" confirm
+    read -p "Changes applied. Reboot now? [Y/n]: " confirm
     confirm=${confirm,,}
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
-        echo "${YELLOW}Rebooting...${RESET}"
+        echo "Rebooting..."
         sleep 2
         reboot
     else
-        echo "${YELLOW}You must reboot manually for changes to take effect.${RESET}"
+        echo "You must reboot manually for changes to take effect."
     fi
 }
 
 clear
-echo "${BOLD}${CYAN}Enable sudo in crosh!${RESET}"
-echo "${BLUE}"
-echo "1) disable rootfs verification (Dev Mode required)${RESET}"
-echo "${MAGENTA}"
-echo "2) Install minioverride.so (requires rootfs verification disabled)${RESET}"
-echo "${RED}"
+echo "Enable sudo in crosh!"
+echo ""
+echo "1) disable rootfs verification (Dev Mode required)"
+echo ""
+echo "2) Install minioverride.so (requires rootfs verification disabled)"
+echo ""
 echo "q) Quit"
-echo "${RESET}"
+echo ""
 
-read -p "${GREEN}Select an option [1 / 2 / q]: ${RESET}" choice
+read -p "Select an option [1 / 2 / q]: " choice
 
 case "$choice" in
     1)
         echo
-        echo "${YELLOW}This will run disable rootfs verification by running:${RESET}"
+        echo "This will run disable rootfs verification by running:"
         echo "/usr/libexec/debugd/helpers/dev_features_rootfs_verification"
         /usr/libexec/debugd/helpers/dev_features_rootfs_verification
         reboot_prompt
         ;;
     2)
         echo
-        echo "${YELLOW}You must disable rootfs verification to proceed.${RESET}"
+        echo "You must disable rootfs verification to proceed."
         prompt_confirm
 
         if [ ! -f "/home/chronos/user/MyFiles/minioverride.so" ]; then
-            echo "${RED}File not found: /home/chronos/user/MyFiles/minioverride.so${RESET}"
+            echo "File not found: /home/chronos/user/MyFiles/minioverride.so"
             exit 1
         fi
 
-        echo "${GREEN}Copying minioverride.so${RESET}"
+        echo "Copying minioverride.so"
         mkdir -p /usr/local/bin
         cp /home/chronos/user/MyFiles/minioverride.so /usr/local/bin/
         chmod +x /usr/local/bin/minioverride.so
 
-        echo "${GREEN}Patching /etc/init/ui.conf...${RESET}"
+        echo "Patching /etc/init/ui.conf..."
         sed -i '1s/^/env LD_PRELOAD=\/usr\/local\/bin\/minioverride.so\n/' /etc/init/ui.conf 
 
         reboot_prompt
         ;;
     q|Q)
-        echo "${YELLOW}Exiting installer.${RESET}"
+        echo "Exiting installer."
         exit 0
         ;;
     *)
-        echo "${RED}Invalid selection. Exiting.${RESET}"
+        echo "Invalid selection. Exiting."
         exit 1
         ;;
 esac
