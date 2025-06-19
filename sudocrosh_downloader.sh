@@ -36,7 +36,7 @@ echo "╠═══════════════════════�
 echo "║                                                                 ║"
 echo "║                    In VT-2 as root run:                         ║"
 echo "║                                                                 ║"
-echo "║  mv /home/chronos/sudocrosh.sh /usr/local/                      ║"
+echo "║  sudo mv /home/chronos/sudocrosh.sh /usr/local/                 ║"
 echo "║  sudo bash /usr/local/bin/sudocrosh.sh                          ║"
 echo "║                                                                 ║"
 echo "╚═════════════════════════════════════════════════════════════════╝"
