@@ -41,22 +41,28 @@ echo "╚═══════════════════════�
         sleep 2
         reboot
     else
-        echo "You must reboot manually for changes to take effect."
+echo "╔═════════════════════════════════════════════════════════════════╗"
+echo "║                                                                 ║"
+echo "║      You must reboot manually for changes to take effect.       ║"
+echo "║                                                                 ║"
+echo "╚═════════════════════════════════════════════════════════════════╝"
     fi
 }
 
 clear
-echo "╔═════════════════════════════════════════════════════════════════╗"
-echo "║                                                                 ║"
-echo "║                     Enable sudo in crosh!                       ║"
-echo "║                                                                 ║"
-echo "║1) disable rootfs verification (Dev Mode required)
-.3║"
-echo ""
-echo "2) Install minioverride.so (requires rootfs verification disabled)"
-echo ""
-echo "q) Quit"
-echo ""
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║                                                                  ║"
+echo "║                     Enable sudo in crosh!                        ║"
+echo "║                                                                  ║"
+echo "╠══════════════════════════════════════════════════════════════════╣"
+echo "║                                                                  ║"
+echo "║  1) disable rootfs verification (Dev Mode required)              ║"
+echo "║                                                                  ║"
+echo "║  2) Run minioverride.so (requires rootfs verification disabled)  ║"
+echo "║                                                                  ║"
+echo "║  q) Quit                                                         ║"
+echo "║                                                                  ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
 
 read -p "Select an option [1 / 2 / q]: " choice
 
