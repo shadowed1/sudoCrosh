@@ -9,20 +9,32 @@ BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
 prompt_confirm() {
-    echo
-    read -p "Are you sure? [Y/n]: " confirm
+echo "╔═════════════════════════════════════════════════════════════════╗"
+echo "║                                                                 ║"
+echo "║                      Are you sure? [Y/n]:                       ║"
+echo "║                                                                 ║"
+echo "╚═════════════════════════════════════════════════════════════════╝"
+    read -r -p "> " confirm
     confirm=${confirm,,} # lowercase
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
         return 0
     else
-        echo "Aborted by user."
+echo "╔═════════════════════════════════════════════════════════════════╗"
+echo "║                                                                 ║"
+echo "║                        Aborted by user.                         ║"
+echo "║                                                                 ║"
+echo "╚═════════════════════════════════════════════════════════════════╝"
         exit 1
     fi
 }
 
 reboot_prompt() {
-    echo
-    read -p "Changes applied. Reboot now? [Y/n]: " confirm
+echo "╔═════════════════════════════════════════════════════════════════╗"
+echo "║                                                                 ║"
+echo "║              Changes applied. Reboot now? [Y/n]:                ║"
+echo "║                                                                 ║"
+echo "╚═════════════════════════════════════════════════════════════════╝"
+    read -r -p "> " confirm
     confirm=${confirm,,}
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
         echo "Rebooting..."
@@ -34,9 +46,12 @@ reboot_prompt() {
 }
 
 clear
-echo "Enable sudo in crosh!"
-echo ""
-echo "1) disable rootfs verification (Dev Mode required)"
+echo "╔═════════════════════════════════════════════════════════════════╗"
+echo "║                                                                 ║"
+echo "║                     Enable sudo in crosh!                       ║"
+echo "║                                                                 ║"
+echo "║1) disable rootfs verification (Dev Mode required)
+.3║"
 echo ""
 echo "2) Install minioverride.so (requires rootfs verification disabled)"
 echo ""
