@@ -7,12 +7,12 @@ MAGENTA=$(tput setaf 5)
 CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
+curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/minioverride.c -o /home/chronos/user/MyFiles/
+curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
 echo "╔═════════════════════════════════════════════════════════════════╗"
 echo "║                                                                 ║"
 echo "║  Downloading to: /home/chronos/sudocrosh.sh                     ║"
 echo "║  Downloading to: /home/chronos/user/MyFiles/minioverride.c      ║"
-curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/minioverride.c -o /home/chronos/user/MyFiles/
-curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
 echo "║                                                                 ║"
 echo "╠═════════════════════════════════════════════════════════════════╣"
 echo "║                                                                 ║"
