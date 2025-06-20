@@ -61,7 +61,7 @@ clear
 echo "${CYAN}"
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
-echo "║                      Enable sudo in crosh!                       ║"
+echo "║                      Enable sudo for Crosh shell:                ║"
 echo "║                                                                  ║"
 echo "╠══════════════════════════════════════════════════════════════════╣"
 echo "║                                                                  ║"
@@ -144,7 +144,7 @@ echo "║                                                                  ║"
 echo "║                   Invalid selection. Exiting.                    ║"
 echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
-echo ${RESET}"
+echo "${RESET}"
         exit 1
         ;;
 esac
