@@ -76,7 +76,7 @@ echo "║     Reboot and re-run the installer after choosing option 1.     ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
 
-read -p "Select an option [1 / 2 / q]: " choice
+read -p "Select an option: [1 / 2 / q] " choice
 
 case "$choice" in
     1)
