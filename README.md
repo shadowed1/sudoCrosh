@@ -10,7 +10,7 @@
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
 <br>
 
-`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")`
+`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br>
 *Downloads sudocrosh.sh and places it in /home/chronos/ and opens up commands for fast copy-paste.*
 
 <br> <br>
