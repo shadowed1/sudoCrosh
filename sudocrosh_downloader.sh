@@ -7,8 +7,18 @@ MAGENTA=$(tput setaf 5)
 CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
+echo "${YELLOW}"
+echo "        ::::::::  :::    ::: :::::::::   ::::::::          ::::::::  :::::::::   ::::::::   ::::::::  :::    :::"
+echo "      :+:    :+: :+:    :+: :+:    :+: :+:    :+:        :+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:    :+:"
+echo "     +:+        +:+    +:+ +:+    +:+ +:+    +:+        +:+        +:+    +:+ +:+    +:+ +:+        +:+    +:+"   
+echo "    +#++:++#++ +#+    +:+ +#+    +:+ +#+    +:+        +#+        +#++:++#:  +#+    +:+ +#++:++#++ +#++:++#++"    
+echo "          +#+ +#+    +#+ +#+    +#+ +#+    +#+        +#+        +#+    +#+ +#+    +#+        +#+ +#+    +#+"     
+echo "  #+#    #+# #+#    #+# #+#    #+# #+#    #+#        #+#    #+# #+#    #+# #+#    #+# #+#    #+# #+#    #+#"      
+echo "  ########   ########  #########   ########          ########  ###    ###  ########   ########  ###    ###${RESET}"       
+                                                  
+
 curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
-echo "Downloading sudocrosh.sh to: /home/chronos/"   
+echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
 echo "${BLUE}"
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║                                                                                                                   ║"
