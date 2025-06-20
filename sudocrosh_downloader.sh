@@ -9,6 +9,7 @@ BOLD=$(tput bold)
 RESET=$(tput sgr0)
 echo ""
 echo ""
+echo ""
 echo "${YELLOW}"
 echo "        ::::::::  :::    ::: :::::::::   ::::::::          ::::::::  :::::::::   ::::::::   ::::::::  :::    :::"
 echo "      :+:    :+: :+:    :+: :+:    :+: :+:    :+:        :+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:    :+:"
@@ -18,6 +19,7 @@ echo "          +#+ +#+    +#+ +#+    +#+ +#+    +#+        +#+        +#+    +#
 echo "  #+#    #+# #+#    #+# #+#    #+# #+#    #+#        #+#    #+# #+#    #+# #+#    #+# #+#    #+# #+#    #+#"      
 echo "  ########   ########  #########   ########          ########  ###    ###  ########   ########  ###    ###${RESET}"       
 echo ""                                                  
+echo ""
 echo ""
 curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
 echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
