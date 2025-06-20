@@ -4,17 +4,17 @@ Requires Developer Mode.
 
 ═════════════════════════════════════════════════════════════════════════
 
-
+__How to Install:__ <br>
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
-
+<br>
 
 `bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br> <br>
 *Downloads sudocrosh.sh and places it in /home/chronos/*
 
 <br>
-
 <br>
-                                                                                                                                                    
+
+                                                                                                                                            
 __1.) Install Linux development environment and start it up.__ 
 
 <br>
