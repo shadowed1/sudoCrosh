@@ -56,12 +56,14 @@ echo "║                      Enable sudo in crosh!                       ║"
 echo "║                                                                  ║"
 echo "╠══════════════════════════════════════════════════════════════════╣"
 echo "║                                                                  ║"
-echo "║  1) disable rootfs verification (Dev Mode required)              ║"
+echo "║  1) Disable rootfs verification (Dev Mode required)              ║"
 echo "║                                                                  ║"
-echo "║  2) Run minioverride.so (requires rootfs verification disabled)  ║"
+echo "║  2) Enable sudo for Crosh (disable rootfs verification first!)   ║"
 echo "║                                                                  ║"
 echo "║  q) Quit                                                         ║"
 echo "║                                                                  ║"
+echo "╠══════════════════════════════════════════════════════════════════╣"
+echo "║     Reboot and re-run the installer after choosing option 1.     ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 
 read -p "Select an option [1 / 2 / q]: " choice
@@ -73,6 +75,7 @@ echo "║                                                                  ║"
 echo "║  This will run disable rootfs verification by running:           ║"
 echo "║  /usr/libexec/debugd/helpers/dev_features_rootfs_verification    ║"
 echo "║                                                                  ║"
+echo "║  - Requires reboot to apply changes!                             ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
         /usr/libexec/debugd/helpers/dev_features_rootfs_verification
         reboot_prompt
@@ -80,16 +83,16 @@ echo "╚═══════════════════════�
     2)
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
-echo "║        You must disable rootfs verification to proceed.          ║"
+echo "║   You must disable rootfs verification and reboot to proceed!    ║"
 echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 
         prompt_confirm
 
-        if [ ! -f "/home/chronos/user/MyFiles/minioverride.so" ]; then
+        if [ ! -f "/home/chronos/user/MyFiles/Downloads/minioverride.so" ]; then
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
-echo "║    File not found: /home/chronos/user/MyFiles/minioverride.so    ║"
+echo "║ Not found: /home/chronos/user/MyFiles/Downloads/minioverride.so  ║"
 echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
             exit 1
