@@ -5,7 +5,7 @@
 <br>
 
 
-<p align="center">  An installer for enabling sudo in crosh as fast as possible. Requires Developer Mode. </p><br> <br> <br>
+<p align="center">  A ChromeOS installer for enabling sudo in crosh as fast as possible. Requires Developer Mode. </p><br> <br> <br>
 
 
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
