@@ -17,34 +17,40 @@ Open Crosh shell (ctrl-alt-t), copy paste, and run:
 
 <br>
                                                                                                                                                     
-**1.)** Install Linux development environment and start it up. <br>
+__1.) Install Linux development environment and start it up.__ 
 
-**2.)** Open crosh shell (ctrl-alt-t), copy paste, and run: <br>
+<br>
+
+__2.) Open crosh shell (ctrl-alt-t), copy paste, and run:__ 
+
+<br>
                                                                  
 `vmc share termina Downloads` <br><br>                                                                                                                                     
                                                                                                                   
-**3).** In Crostini, copy paste and run each command at a time: <br>
+__3). In Crostini, copy paste and run each command at a time:__ 
+
+<br>
  
  `sudo apt-get update`<br>
  `sudo apt install gcc`<br>
  `curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o mnt/chromeos/MyFiles/Downloads/minioverride.c`<br>
  `gcc mnt/chromeos/MyFiles/Downloads/minioverride.c -o mnt/chromeos/MyFiles/Downloads/minioverride.so -shared`<br> <br>
 
-**4).** In VT-2 (ctrl-alt-forward) login as root and run:  <br>
+__4). In VT-2 (ctrl-alt-forward) login as root and run:__ 
+
+<br>
 
 `sudo mv /home/chronos/sudocrosh.sh /usr/local/`
 `sudo chmod +x /usr/local/sudocrosh.sh`
 `sudo bash /usr/local/sudocrosh.sh`
 
-**5).** Running sudocrosh.sh launches an installer to disable rootfs verification and enable sudo in crosh. <br>
-    Reboot is required to apply disabling rootfs verification; re-run sudocrosh.sh to proceed with enabling sudo in Crosh. 
-
 ═════════════════════════════════════════════════════════════════════════
 
-*Each time ChromeOS updates these changes are overwritten. Re-run:*
-`sudo bash /usr/local/sudocrosh.sh`
+*Each time ChromeOS updates these changes are overwritten. Re-run:* <br>
 
-Credits:
+`sudo bash /usr/local/sudocrosh.sh` <br><br>
+
+__Credits:__
 
 Original Guide: https://gist.github.com/velzie/a5088c9ade6ec4d35435b9826b45d7a3 <br>
 Created by velzie: https://github.com/velzie <br>
