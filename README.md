@@ -1,7 +1,8 @@
 # sudoCrosh
-An installer to make enabling sudo in crosh as fast as possible. 
-Requires Developer Mode
-═════════════════════════════════════════════════════════════════════════════════════════
+An installer to make enabling sudo in crosh as fast as possible.<br>
+Requires Developer Mode.
+
+════════════════════════════════════════════════════════════════════════════
 
 
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
@@ -38,7 +39,7 @@ Open Crosh shell (ctrl-alt-t), copy paste, and run:
 **5).** Running sudocrosh.sh launches an installer to disable rootfs verification and enable sudo in crosh. <br>
     Reboot is required to apply disabling rootfs verification; re-run sudocrosh.sh to proceed with enabling sudo in Crosh. 
 
-═════════════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════
 
 *Each time ChromeOS updates these changes are overwritten. Re-run sudocrosh.sh in /usr/local/sudocrosh.sh*
 
