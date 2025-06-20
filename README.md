@@ -8,12 +8,10 @@ Requires Developer Mode.
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
 
 
-`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br>
+`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br> <br>
 *Downloads sudocrosh.sh and places it in /home/chronos/*
 
 <br>
-
-*The installer contains the same instructions for easy copy-paste:*
 
 <br>
                                                                                                                                                     
@@ -40,9 +38,8 @@ __4). In VT-2 (ctrl-alt-forward) login as root and run:__
 
 <br>
 
-`sudo mv /home/chronos/sudocrosh.sh /usr/local/`
-`sudo chmod +x /usr/local/sudocrosh.sh`
-`sudo bash /usr/local/sudocrosh.sh`
+`sudo mv /home/chronos/sudocrosh.sh /usr/local/` <br>
+`sudo bash /usr/local/sudocrosh.sh` <br>
 
 ═════════════════════════════════════════════════════════════════════════
 
