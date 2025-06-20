@@ -1,49 +1,46 @@
 # sudoCrosh
 An installer to make enabling sudo in crosh as fast as possible. 
-
-## Open Crosh shell (ctrl-alt-t), copy paste, and run:
-
-`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")`
+Requires Developer Mode
+═════════════════════════════════════════════════════════════════════════════════════════
 
 
-The installer contains the instructions for easy copy-paste. 
+Open Crosh shell (ctrl-alt-t), copy paste, and run: 
 
-<br>
-<br>
-                                                                 
-HOW TO INSTALL:                          
-                                                                 
-1): In Crostini, copy paste and run: <br>
-                                                                                                                                            
-  `sudo apt-get update`                                            
-  `sudo apt install gcc`                                           
-  `gcc ~/minioverride.c -o ~/minioverride.so -shared`              
+
+`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br>
+Downloads to: /home/chronos
 
 <br>
 
+*The installer contains the same instructions for easy copy-paste:*
 
-2):
+<br>
+                                                                                                                                                    
+1.) Install Linux development environment and start it up. <br>
+
+2.) Open crosh shell (ctrl-alt-t), copy paste, and run: <br>
                                                                  
-In the Chrome Files app, copy:                   
-                                                                 
-`minioverride.so` from My Files/Linux File's/ to My Files/     
+`vmc share termina Downloads` <br><br>                                                                                                                                     
                                                                                                                   
-3):
+3). In Crostini, copy paste and run: <br>
+ 
+ `sudo apt-get update`<br>
+ `sudo apt install gcc`<br>
+ `curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o mnt/chromeos/MyFiles/Downloads/minioverride.c`<br>
+ `gcc mnt/chromeos/MyFiles/Downloads/minioverride.c -o mnt/chromeos/MyFiles/Downloads/minioverride.so -shared`<br> <br>
 
-In VT-2 as root run:                         
-                                                                 
-                                                                 
-  `sudo mkdir -p /usr/local/bin`                                   
-  `mv /home/chronos/user/MyFiles/minioverride.so /usr/local/bin/`  
-  `mv /home/chronos/sudocrosh.sh /usr/local/bin`                   
-  `chmod +x /usr/local/bin/minioverride.so`                        
-  `bash /usr/local/bin/sudocros.sh`                                     
-                                                                 
+4). In VT-2 (ctrl-alt-forward) login as root and run:  <br>
 
+`sudo mv /home/chronos/sudocrosh.sh /usr/local/`
+`sudo bash /usr/local/sudocrosh.sh`
 
-After rebooting you should be able to use sudo inside crosh as you would normally before updating to 117. It will display the warning, but sudo should work regardless.
+5). Running sudocrosh.sh launches an installer to disable rootfs verification and enable sudo in crosh. <br>
+    Reboot is required to apply disabling rootfs verification; re-run sudocrosh.sh to proceed with enabling sudo in Crosh. 
 
-*Each time ChromeOS updates these changes are overwritten. Do step 1 and step 6 again. Keep a copy of your minioverride.c and .so handy.* 
+═════════════════════════════════════════════════════════════════════════════════════════
+
+*Each time ChromeOS updates these changes are overwritten. Re-run sudocrosh.sh in /usr/local/sudocrosh.sh*
+
 
 Original Guide: https://gist.github.com/velzie/a5088c9ade6ec4d35435b9826b45d7a3 
 Created by velzie: https://gist.github.com/velzie 
