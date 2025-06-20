@@ -41,7 +41,8 @@ Open Crosh shell (ctrl-alt-t), copy paste, and run:
 
 ═════════════════════════════════════════════════════════════════════════
 
-*Each time ChromeOS updates these changes are overwritten. Re-run sudocrosh.sh in /usr/local/sudocrosh.sh*
+*Each time ChromeOS updates these changes are overwritten. Re-run:*
+`sudo bash /usr/local/sudocrosh.sh`
 
 Credits:
 
