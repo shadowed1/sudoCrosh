@@ -21,7 +21,7 @@ echo "  ########   ########  #########   ########          ########  ###    ### 
 echo ""                                                  
 echo ""
 echo ""
-curl -L https://raw.githubusercontent.com/shadowed1/ChromeOS_PowerControl/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
+curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
 echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
 echo "${BLUE}" 
 echo "╔══════════════════════════════════════════════════════════════╗"
