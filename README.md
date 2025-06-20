@@ -31,5 +31,5 @@ __Credits:__
 
 Original Guide: https://gist.github.com/velzie/a5088c9ade6ec4d35435b9826b45d7a3 <br>
 Created by velzie: https://github.com/velzie <br>
-
+GUI inspired by CRAP: https://github.com/chrultrabook/crap
 
