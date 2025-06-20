@@ -1,12 +1,16 @@
-# sudoCrosh
-An installer to make enabling sudo in crosh as fast as possible. Requires Developer Mode. <br>
+
+<p align="center">
+  <img src="https://i.imgur.com/fTHM281.png" alt="logo" />
+</p>  
 
 
-__How to Install:__ <br>
+  An installer for enabling sudo in crosh as fast as possible. Requires Developer Mode. <br> <br> <br>
+
+
 Open Crosh shell (ctrl-alt-t), copy paste, and run: 
 <br>
 
-`bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")` <br> <br>
+      bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)") 
 *Downloads sudocrosh.sh and places it in /home/chronos/ and opens up commands for fast copy-paste.*
 
 
