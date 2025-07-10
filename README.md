@@ -8,7 +8,7 @@
 <p align="center">  A ChromeOS installer for enabling sudo in crosh as fast as possible. Requires Developer Mode. </p><br> <br> <br>
 
 
-Open Crosh shell (ctrl-alt-t), copy paste, and run: 
+Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run: 
 <br>
 
 <pre>bash <(curl -s "https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh_downloader.sh?$(date +%s)")</pre>
