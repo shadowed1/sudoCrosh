@@ -48,7 +48,7 @@ echo "gcc /mnt/chromeos/MyFiles/Downloads/minioverride.c -o /mnt/chromeos/MyFile
 echo "${RESET}${MAGENTA}"
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
-echo "║  4). In VT-2 (ctrl-alt-forward) login as root and run:       ║"
+echo "║  4). In VT-2 (ctrl-alt-F2) login as root and run:            ║"
 echo "║                                                              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo "${RESET}${MAGENTA}${BOLD}"
