@@ -25,11 +25,11 @@ Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run:
 
 
 
-<br> <br> <br>
+<br> <br>
 
 Each time ChromeOS is updated re-enable by running in VT-2: <br>
 `bash /usr/local/sudoCrosh.sh` <br>
-<br><br><br>
+<br><br>
 
 __Credits:__
 
