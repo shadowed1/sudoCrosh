@@ -27,6 +27,9 @@ Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run:
 
 <br> <br> <br>
 
+Each time ChromeOS is updated re-enable by running:<br>
+`bash /usr/local/sudoCrosh.sh` <br>
+
 __Credits:__
 
 Original Guide: https://gist.github.com/velzie/a5088c9ade6ec4d35435b9826b45d7a3 <br>
