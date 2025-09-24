@@ -103,7 +103,7 @@ echo "${RESET}"
 
         prompt_confirm
 
-        if [ ! -f "/home/chronos/user/MyFiles/Downloads/minioverride.so" ]; then
+        if [ ! -f "/home/chronos/user/minioverride.so" ]; then
 echo "${RED}"
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
