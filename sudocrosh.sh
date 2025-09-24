@@ -17,7 +17,7 @@ echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
     read -r -p "> " confirm
-    confirm=${confirm,,} # lowercase
+    confirm=${confirm,,}
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
         return 0
     else
