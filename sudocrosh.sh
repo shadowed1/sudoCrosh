@@ -43,7 +43,7 @@ echo "${RESET}"
     read -r -p "> " confirm
     confirm=${confirm,,}
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
-        echo "Rebooting..."
+        echo "Rebooting, please wait..."
         sleep 2
         reboot
     else
