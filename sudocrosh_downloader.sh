@@ -28,7 +28,7 @@ if [[ "$ARCH" == "x86_64" ]]; then
 elif [[ "$ARCH" == "aarch64" ]]; then
   curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/aarch_minioverride.so -o /home/chronos/minioverride.so
 else
-  echo "Unsupported architecture: $ARCH"
+  echo "${RED}Unsupported architecture: $ARCH ${RESET}"
 fi
 echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
 echo "╔══════════════════════════════════════════════════════════════╗"
