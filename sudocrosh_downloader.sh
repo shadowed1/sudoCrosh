@@ -21,40 +21,25 @@ echo "  ########   ########  #########   ########          ########  ###    ### 
 echo ""                                                  
 echo ""
 echo ""
-curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh.sh
+curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh
+ARCH=$(uname -m)
+if [[ "$ARCH" == "x86_64" ]]; then
+  curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/x86_64_minioverride.so -o /home/chronos/minioverride.so
+elif [[ "$ARCH" == "aarch64" ]]; then
+  curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/aarch_minioverride.so -o /home/chronos/minioverride.so
+else
+  echo "Unsupported architecture: $ARCH"
+fi
 echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
-echo "${BLUE}" 
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
-echo "║  ${RESET}${YELLOW}${BOLD}HOW TO INSTALL:${RESET}${BLUE}                                             ║"
-echo "║                                                              ║"
-echo "║  1.) Install Linux development environment and start it up.  ║"
-echo "║  2.) Open crosh shell (ctrl-alt-t), copy paste, and run:     ║"
-echo "║                                                              ║"
-echo "╚══════════════════════════════════════════════════════════════╝"
-echo "${RESET}${BLUE}${BOLD}"
-echo "vmc share termina Downloads"
-echo "${RESET}${CYAN}"
-echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║                                                              ║"
-echo "║  3). In Crostini, copy paste and run:                        ║"
-echo "║                                                              ║"
-echo "╚══════════════════════════════════════════════════════════════╝"
-echo "${RESET}${CYAN}${BOLD}"
-echo "sudo apt-get update"
-echo "sudo apt install -y gcc"
-echo "curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /mnt/chromeos/MyFiles/Downloads/minioverride.c"
-echo "gcc /mnt/chromeos/MyFiles/Downloads/minioverride.c -o /mnt/chromeos/MyFiles/Downloads/minioverride.so -shared"
-echo "${RESET}${MAGENTA}"
-echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║                                                              ║"
-echo "║  4). In VT-2 (ctrl-alt-F2) login as root and run:            ║"
+echo "║      In VT-2 (ctrl-alt-F2) login as root and run:            ║"
 echo "║      Use Tab key to auto-complete the paths.                 ║"
 echo "║                                                              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo "${RESET}${MAGENTA}${BOLD}"
-echo "mv /home/chronos/sudocrosh.sh /usr/local/"
-echo "bash /usr/local/sudocrosh.sh"
+echo "mv /home/chronos/sudocrosh /usr/local/"
+echo "bash /usr/local/sudocrosh"
 echo "${RESET}"
 echo "${RESET}${YELLOW}"
 echo "╔══════════════════════════════════════════════════════════════╗"
