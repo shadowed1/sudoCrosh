@@ -30,7 +30,8 @@ elif [[ "$ARCH" == "aarch64" ]]; then
 else
   echo "${RED}Unsupported architecture: $ARCH ${RESET}"
 fi
-echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
+echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"
+echo "${CYAN}"
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
 echo "║      In VT-2 (ctrl-alt-F2) login as root and run:            ║"
