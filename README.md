@@ -25,14 +25,16 @@ Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run:
 
 
 
-<br> <br>
+<br>
 
 Each time ChromeOS is updated re-enable by running in VT-2: <br>
 `bash /usr/local/sudocrosh` <br>
-<br><br>
+<br>
 
 To disable updates see:
 `https://github.com/jay0lee/cros-scripts/blob/master/disable_cros_updates.sh`
+
+<br>
 
 __Credits:__
 
