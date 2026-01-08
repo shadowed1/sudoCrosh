@@ -103,13 +103,13 @@ echo "${RESET}"
 
         prompt_confirm
 
-        if [ ! -f "/home/chronos/user/MyFiles/Downloads/minioverride.so" ]; then
+        if [ ! -f "/home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so" ]; then
 echo "${RED}"
-echo "╔══════════════════════════════════════════════════════════════════╗"
-echo "║                                                                  ║"
-echo "║ Not found: /home/chronos/user/MyFiles/Downloads/minioverride.so  ║"
-echo "║                                                                  ║"
-echo "╚══════════════════════════════════════════════════════════════════╝"
+echo "╔════════════════════════════════════════════════════════════════════════════╗"
+echo "║                                                                            ║"
+echo "║ Not found: /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so  ║"
+echo "║                                                                            ║"
+echo "╚════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
             exit 1
         fi
@@ -122,7 +122,7 @@ echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
         mkdir -p /usr/local/bin
-        cp /home/chronos/user/MyFiles/Downloads/minioverride.so /usr/local/bin/
+        cp /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so /usr/local/bin/
         chmod +x /usr/local/bin/minioverride.so
         sed -i '1s/^/env LD_PRELOAD=\/usr\/local\/bin\/minioverride.so\n/' /etc/init/ui.conf 
         reboot_prompt
