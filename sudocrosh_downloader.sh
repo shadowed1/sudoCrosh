@@ -25,17 +25,16 @@ if [[ -d /home/chronos/user/MyFiles/Downloads ]]; then
     mkdir -p /home/chronos/user/MyFiles/Downloads/sudocrosh
     curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh
 fi
-echo "${BOLD}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
+echo "${BOLD}${BLUE}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
 echo "${BLUE}" 
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║                                                                                           ║"
 echo "║  ${RESET}${YELLOW}${BOLD}HOW TO INSTALL: ${RESET}${BLUE}                                                                         ║"
 echo "║                                                                                           ║"
 echo "║  1.) Install Linux development environment and start it up.                               ║"
-echo "║  2.) Open files app in ChromeOS and right click Downloads folder and share it with Linux: ║"
+echo "║  2.) Open files app in ChromeOS and right click Downloads folder and share it with Linux. ║"
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
-echo ""
 echo "${RESET}${CYAN}"
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
