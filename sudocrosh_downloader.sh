@@ -25,7 +25,7 @@ if [[ -d /home/chronos/user/MyFiles/Downloads ]]; then
     mkdir -p /home/chronos/user/MyFiles/Downloads/sudocrosh
     curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh
 fi
-echo "${BOLD}${BLUE}Downloading sudocrosh.sh to: /home/chronos/${RESET}"   
+echo "${BOLD}${BLUE}Downloading sudocrosh to: /home/chronos/${RESET}"   
 echo "${BLUE}" 
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║                                                                                           ║"
