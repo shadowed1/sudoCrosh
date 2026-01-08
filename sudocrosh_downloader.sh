@@ -62,7 +62,7 @@ echo "╔═══════════════════════�
 echo "║                                                              ║"
 echo "║ Each time ChromeOS gets an update, sudo will be disabled.    ║"
 echo "║ In VT-2 (ctrl-alt-F2) login as root and run:                 ║"
-echo "║ ${RESET}${BLUE}bash /usr/local/sudocrosh${RESET}${YELLOW}                                 ║"
+echo "║ ${RESET}${BLUE}bash /usr/local/sudocrosh${RESET}${YELLOW}                                    ║"
 echo "║                                                              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
