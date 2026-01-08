@@ -56,7 +56,6 @@ echo "╚═══════════════════════�
 echo "${RESET}${MAGENTA}${BOLD}"
 echo "mv /home/chronos/sudocrosh /usr/local/"
 echo "bash /usr/local/sudocrosh"
-echo "${RESET}"
 echo "${RESET}${YELLOW}"
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
