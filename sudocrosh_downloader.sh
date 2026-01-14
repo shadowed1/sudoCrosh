@@ -49,7 +49,7 @@ echo "gcc /mnt/chromeos/MyFiles/Downloads/sudocrosh/minioverride.c -o /mnt/chrom
 echo "${RESET}${MAGENTA}"
 echo "╔══════════════════════════════════════════════════════════════╗"
 echo "║                                                              ║"
-echo "║  4). In VT-2 (ctrl-alt-F2) login as root and run:            ║"
+echo "║  4). In VT-2 (ctrl-alt-forward) login as root and run:       ║"
 echo "║      Use Tab key to auto-complete the paths.                 ║"
 echo "║                                                              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
