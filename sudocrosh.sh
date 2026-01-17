@@ -21,10 +21,10 @@ echo "${RESET}"
     if [[ -z "$confirm" || "$confirm" == "y" || "$confirm" == "yes" ]]; then
         return 0
     else
-echo "{RED}"
+echo "${RED}"
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
-echo "║                        Aborted by user.                          ║"
+echo "║                        Exited by user.                           ║"
 echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
