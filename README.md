@@ -27,8 +27,8 @@ Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run:
 
 <br>
 
-Each time ChromeOS is updated re-enable by running in VT-2: <br>
-`bash /usr/local/sudocrosh.sh` <br>
+Each time ChromeOS is updated these changes are reverted. To re-enable, log in as root in VT-2 and run: <br>
+`bash /usr/local/sudocrosh` <br>
 <br>
 
 To disable updates see:
