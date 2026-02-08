@@ -126,7 +126,6 @@ echo "${RESET}"
         chmod +x /usr/local/bin/minioverride.so
         UI_CONF="/etc/init/ui.conf"
         sed -i '/^env LD_PRELOAD=\/usr\/local\/bin\/minioverride\.so$/d' "$UI_CONF"
-        UI_CONF="/etc/init/ui.conf"
 sed -i '/^# <<< SUDOCROSH MARKER <<</,/^# <<< END SUDOCROSH MARKER <<</d' "$UI_CONF"
 {
     echo
