@@ -124,7 +124,16 @@ echo "${RESET}"
         mkdir -p /usr/local/bin
         cp /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so /usr/local/bin/
         chmod +x /usr/local/bin/minioverride.so
-        sed -i '1s/^/env LD_PRELOAD=\/usr\/local\/bin\/minioverride.so\n/' /etc/init/ui.conf 
+        UI_CONF="/etc/init/ui.conf"
+        sed -i '/^env LD_PRELOAD=\/usr\/local\/bin\/minioverride\.so$/d' "$UI_CONF"
+        UI_CONF="/etc/init/ui.conf"
+sed -i '/^# <<< SUDOCROSH MARKER <<</,/^# <<< END SUDOCROSH MARKER <<</d' "$UI_CONF"
+{
+    echo
+    echo "# <<< SUDOCROSH MARKER <<<"
+    echo "env LD_PRELOAD=/usr/local/bin/minioverride.so"
+    echo "# <<< END SUDOCROSH MARKER <<<"
+} >> "$UI_CONF"
         reboot_prompt
         ;;
     q|Q)
