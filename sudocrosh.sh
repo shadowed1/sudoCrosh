@@ -67,7 +67,11 @@ echo "╠═══════════════════════�
 echo "║                                                                  ║"
 echo "║  1) Disable rootfs verification (Dev Mode required)              ║"
 echo "║                                                                  ║"
-echo "║  2) Enable sudo for Crosh (disable rootfs verification first!)   ║"
+echo "║  2) Enable sudo for Crosh (disable rootfs verification first)    ║"
+echo "║                                                                  ║"
+echo "║  3) Disable ChromeOS Auto Updating                               ║"
+echo "║                                                                  ║"
+echo "║  4) Enable ChromeOS Auto Updating                                ║"
 echo "║                                                                  ║"
 echo "║  q) Quit                                                         ║"
 echo "║                                                                  ║"
@@ -76,7 +80,7 @@ echo "║     Reboot and re-run the installer after choosing option 1.     ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
 
-read -p "Select an option: [1 / 2 / q] " choice
+read -p "Select an option: [1 / 2 / 3 / 4 / q] " choice
 
 case "$choice" in
     1)
@@ -133,6 +137,33 @@ sed -i '/^# <<< SUDOCROSH MARKER <<</,/^# <<< END SUDOCROSH MARKER <<</d' "$UI_C
     echo "env LD_PRELOAD=/usr/local/bin/minioverride.so"
     echo "# <<< END SUDOCROSH MARKER <<<"
 } >> "$UI_CONF"
+        reboot_prompt
+        ;;
+    3)
+echo "${RED}"
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║                                                                  ║"
+echo "║  This will disable ChromeOS auto updates by creating a file      ║"
+echo "║  that tells ChromeOS it is up to date. Can be removed anytime.   ║"
+echo "║                                                                  ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
+echo "${RESET}"
+        prompt_confirm
+        mkdir -p /mnt/stateful_partition/etc
+        sudo bash -c 'echo "CHROMEOS_RELEASE_VERSION=99999.9.9" > /mnt/stateful_partition/etc/lsb-release'
+        reboot_prompt
+        ;;
+    4)
+echo "${GREEN}"
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║                                                                  ║"
+echo "║  This will re-enable ChromeOS auto updates by removing a file    ║"
+echo "║  that tells ChromeOS it is up to date. Reboot to allow update.   ║"
+echo "║                                                                  ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
+echo "${RESET}"
+        prompt_confirm
+        rm /mnt/stateful_partition/etc/lsb-release 2>/dev/null
         reboot_prompt
         ;;
     q|Q)
