@@ -40,6 +40,6 @@ __Credits:__
 
 Original Guide: https://gist.github.com/velzie/a5088c9ade6ec4d35435b9826b45d7a3 <br>
 Created by velzie: https://github.com/velzie <br>
-GUI inspired by CRAP: https://github.com/chrultrabook/crap
-Update Commands based on: https://github.com/jay0lee/cros-scripts/blob/master/disable_cros_updates.sh
+GUI inspired by CRAP: https://github.com/chrultrabook/crap <br>
+Update Commands based on: https://github.com/jay0lee/cros-scripts/blob/master/disable_cros_updates.sh <br>
 
