@@ -32,7 +32,7 @@ echo "║  ${RESET}${YELLOW}${BOLD}HOW TO INSTALL: ${RESET}${BLUE}              
 echo "║                                                                                           ║"
 echo "║  1.) Install Linux development environment and start it up.                               ║"
 echo "║  2.) Open files app in ChromeOS and right click Downloads folder and share it with Linux. ║"
-echo "║                                                                                           ║"
+echo "║ (Steps 1 and 2 can be skipped if using Chard)                                             ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}${CYAN}"
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
