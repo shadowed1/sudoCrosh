@@ -69,9 +69,11 @@ echo "║  1) Disable rootfs verification (Dev Mode required)              ║"
 echo "║                                                                  ║"
 echo "║  2) Enable sudo for Crosh (disable rootfs verification first)    ║"
 echo "║                                                                  ║"
-echo "║  3) Disable ChromeOS Auto Updating - Remember if enabling!       ║"
+echo "║  3) Disable sudo for Crosh (removes sudoCrosh)                   ║"
 echo "║                                                                  ║"
-echo "║  4) Enable ChromeOS Auto Updating                                ║"
+echo "║  4) Disable ChromeOS Auto Updating - Remember if enabling!       ║"
+echo "║                                                                  ║"
+echo "║  5) Enable ChromeOS Auto Updating                                ║"
 echo "║                                                                  ║"
 echo "║  q) Quit                                                         ║"
 echo "║                                                                  ║"
@@ -143,6 +145,35 @@ sed -i '/^# <<< SUDOCROSH MARKER <<</,/^# <<< END SUDOCROSH MARKER <<</d' "$UI_C
 echo "${RED}"
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
+echo "║  This will remove sudoCrosh and re-disable sudo in shell.        ║"
+echo "║                                                                  ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
+echo "${RESET}"
+        prompt_confirm
+        CHROMEOS_UICONF="/etc/init/ui.conf"
+        TARGET_FILE=""
+        
+        if [ -f "$CHROMEOS_UICONF" ]; then
+            TARGET_FILE="$CHROMEOS_UICONF"
+        fi
+        
+        if [ -n "$TARGET_FILE" ]; then
+            sed -i '/^# <<< SUDOCROSH MARKER <<</,/^# <<< END SUDOCROSH MARKER <<</d' "$TARGET_FILE"
+        else
+            echo "${RED}No ui.conf found! ${RESET}"
+        fi
+        
+        rm /usr/local/bin/minioverride.so 2>/dev/null
+        rm /usr/local/sudocrosh 2>/dev/null
+        rm -rf /home/chronos/user/MyFiles/Downloads/sudocrosh 2>/dev/null
+        echo "${GREEN}sudoCrosh successfully removed. ${RESET}"
+        echo "${YELLOW}Rootfs verification will remain disabled until ChromeOS updates.${RESET}
+        reboot_prompt
+        ;;
+    4)
+echo "${RED}"
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║                                                                  ║"
 echo "║  This will disable ChromeOS auto updates by creating a file      ║"
 echo "║  that tells ChromeOS it is up to date. Can be removed anytime.   ║"
 echo "║                                                                  ║"
@@ -150,10 +181,10 @@ echo "╚═══════════════════════�
 echo "${RESET}"
         prompt_confirm
         mkdir -p /mnt/stateful_partition/etc
-        sudo bash -c 'echo "CHROMEOS_RELEASE_VERSION=99999.9.9" > /mnt/stateful_partition/etc/lsb-release'
+        bash -c 'echo "CHROMEOS_RELEASE_VERSION=99999.9.9" > /mnt/stateful_partition/etc/lsb-release'
         reboot_prompt
         ;;
-    4)
+    5)
 echo "${GREEN}"
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                                                                  ║"
