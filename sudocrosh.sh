@@ -82,7 +82,7 @@ echo "║     Reboot and re-run the installer after choosing option 1.     ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
 
-read -p "Select an option: [1 / 2 / 3 / 4 / q] " choice
+read -p "Select an option: [1 / 2 / 3 / 4 / 5 / q] " choice
 
 case "$choice" in
     1)
@@ -167,7 +167,8 @@ echo "${RESET}"
         rm /usr/local/sudocrosh 2>/dev/null
         rm -rf /home/chronos/user/MyFiles/Downloads/sudocrosh 2>/dev/null
         echo "${GREEN}sudoCrosh successfully removed. ${RESET}"
-        echo "${YELLOW}Rootfs verification will remain disabled until ChromeOS updates.${RESET}
+        echo "${YELLOW}Rootfs verification will remain disabled until ChromeOS updates or PowerWash. ${RESET}"
+        echo
         reboot_prompt
         ;;
     4)
