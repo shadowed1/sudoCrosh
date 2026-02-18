@@ -172,7 +172,9 @@ echo "${RESET}"
         rm /usr/local/bin/minioverride.so 2>/dev/null
         rm /usr/local/sudocrosh 2>/dev/null
         rm -rf /home/chronos/user/MyFiles/Downloads/sudocrosh 2>/dev/null
+        echo
         echo "${GREEN}sudoCrosh successfully removed. ${RESET}"
+        echo
         echo "${YELLOW}Rootfs verification will remain disabled until ChromeOS updates or PowerWash. ${RESET}"
         echo
         reboot_prompt
