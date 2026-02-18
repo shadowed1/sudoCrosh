@@ -176,6 +176,7 @@ echo "${RESET}"
         echo "${YELLOW}Rootfs verification will remain disabled until ChromeOS updates or PowerWash. ${RESET}"
         echo
         reboot_prompt
+        exit 0
         ;;
     4)
 echo "${RED}"
