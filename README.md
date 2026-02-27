@@ -27,9 +27,11 @@ Open Crosh shell (ctrl-alt-t), enter `shell`, copy paste, and run:
 
 <br>
 
-Each time ChromeOS is updated these changes are reverted. To re-enable, log in as root in VT-2 and run: <br>
+*Each time ChromeOS is updated these changes are reverted*. To re-enable:
+1) log in as root in VT-2 and run: <br>
 `bash /usr/local/sudocrosh` <br>
-Run step 1, reboot and re-run above command. Run step 2 and reboot and sudo will be re-enabled after an update. <br>
+2) Run step 1, reboot and re-run above command.
+3) Run step 2 and reboot. sudo will be re-enabled. <br>
 
 __Credits:__
 
