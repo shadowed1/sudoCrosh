@@ -41,7 +41,7 @@ echo "║  3a). In Crostini, copy paste and run:                                
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}${CYAN}${BOLD}"
-echo "sudo apt-get update"
+echo "sudo apt update"
 echo "sudo apt install -y gcc"
 echo "mkdir -p /mnt/chromeos/MyFiles/Downloads/sudocrosh/"
 echo "curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /mnt/chromeos/MyFiles/Downloads/sudocrosh/minioverride.c"
