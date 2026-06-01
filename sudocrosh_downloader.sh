@@ -43,7 +43,13 @@ echo "╚═══════════════════════�
 echo "${RESET}${CYAN}${BOLD}"
 echo "sudo apt update"
 echo "sudo apt install -y gcc"
-echo "mkdir -p /mnt/chromeos/MyFiles/Downloads/sudocrosh/"
+echo
+echo "if [ -f /mnt/shared/MyFiles/Downloads/ ]; then"
+echo "    mkdir -p /mnt/shared/MyFiles/Downloads/sudocrosh"
+echo "elif [ -f /mnt/chromeos/MyFiles/Downloads/sudocrosh ]; then"
+echo "    mkdir -p /mnt/chromeos/MyFiles/Downloads/sudocrosh"
+echo "fi"
+echo
 echo "curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /mnt/chromeos/MyFiles/Downloads/sudocrosh/minioverride.c"
 echo "gcc /mnt/chromeos/MyFiles/Downloads/sudocrosh/minioverride.c -o /mnt/chromeos/MyFiles/Downloads/sudocrosh/minioverride.so -shared"
 echo "${RESET}${RED}"
@@ -74,7 +80,7 @@ echo "║ In VT-2 (ctrl-alt-F2) login as root and run:                          
 echo "║ ${RESET}${BLUE}bash /usr/local/sudocrosh${RESET}${YELLOW}                                                                 ║"
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
-echo "${RESET}"
+echo "${RESET}$"
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║              Original guide created by Velzie:                                            ║"
 echo "║                  https://github.com/velzie                                                ║"
