@@ -72,7 +72,7 @@ echo "║ In VT-2 (ctrl-alt-F2) login as root and run:                          
 echo "║ ${RESET}${BLUE}bash /usr/local/sudocrosh${RESET}${YELLOW}                                                                 ║"
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
-echo "${RESET}$"
+echo "${RESET}"
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║              Original guide created by Velzie:                                            ║"
 echo "║                  https://github.com/velzie                                                ║"
