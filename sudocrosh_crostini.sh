@@ -8,6 +8,9 @@ CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
+sudo apt update
+sudo apt install -y gcc
+
 if [ -d /mnt/shared/MyFiles/Downloads ]; then
     SUDOCROSH="/mnt/shared/MyFiles/Downloads/sudocrosh"
 elif [ -d /mnt/chromeos/MyFiles/Downloads ]; then
