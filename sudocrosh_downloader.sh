@@ -61,7 +61,7 @@ echo "║  4). In VT-2 (ctrl-alt-refresh) login as root and run:                
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}${MAGENTA}${BOLD}"
-echo "mv /home/chronos/sudocrosh /usr/local/"
+echo "cp /home/chronos/sudocrosh /usr/local/"
 echo
 echo "bash /usr/local/sudocrosh"
 echo "${RESET}${YELLOW}"
