@@ -115,11 +115,11 @@ echo "${RESET}"
 
         prompt_confirm
 
-        if [ ! -f "/home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so" ]; then
+        if [ ! -f "/home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.so" ]; then
 echo "${RED}"
 echo "╔════════════════════════════════════════════════════════════════════════════╗"
 echo "║                                                                            ║"
-echo "║ Not found: /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so  ║"
+echo "║ Not found: /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.so  ║"
 echo "║                                                                            ║"
 echo "╚════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
@@ -134,7 +134,7 @@ echo "║                                                                  ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo "${RESET}"
         mkdir -p /usr/local/bin
-        cp /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so /usr/local/bin/
+        cp /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.so /usr/local/bin/
         chmod +x /usr/local/bin/minioverride.so
         UI_CONF="/etc/init/ui.conf"
         sed -i '/^env LD_PRELOAD=\/usr\/local\/bin\/minioverride\.so$/d' "$UI_CONF"
@@ -171,7 +171,7 @@ echo "${RESET}"
         
         rm /usr/local/bin/minioverride.so 2>/dev/null
         rm /usr/local/sudocrosh 2>/dev/null
-        rm -rf /home/chronos/user/MyFiles/Downloads/sudocrosh 2>/dev/null
+        rm -rf /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh 2>/dev/null
         echo
         echo "${GREEN}sudoCrosh successfully removed. ${RESET}"
         echo

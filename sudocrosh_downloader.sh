@@ -21,7 +21,7 @@ echo "  ########   ########  #########   ########          ########  ###    ### 
 echo ""                                                  
 echo ""
 if [[ -d /home/chronos/user/MyFiles/Downloads ]]; then
-    mkdir -p /home/chronos/user/MyFiles/Downloads/sudocrosh
+    mkdir -p /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh
     curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/sudocrosh.sh -o /home/chronos/sudocrosh
 fi
 echo "${BOLD}${BLUE}Downloading sudocrosh to: /home/chronos/${RESET}"   
@@ -53,9 +53,9 @@ echo "║  3b). OR in ${BOLD}Chard${RESET}${RED}, copy paste and run:           
 echo "║                                                                                           ║"
 echo "╚═══════════════════════════════════════════════════════════════════════════════════════════╝"
 echo "${RESET}${RED}${BOLD}"
-echo "mkdir -p /home/chronos/user/MyFiles/Downloads/sudocrosh/"
-echo "curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.c"
-echo "gcc /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.c -o /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so -shared"
+echo "mkdir -p /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/"
+echo "curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.c"
+echo "gcc /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.c -o /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.so -shared"
 echo "${RESET}${MAGENTA}"
 echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
 echo "║                                                                                           ║"
