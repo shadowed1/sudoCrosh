@@ -8,6 +8,6 @@ CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
-mkdir -p /home/chronos/user/MyFiles/Downloads/sudocrosh/
-curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.c
-gcc /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.c -o /home/chronos/user/MyFiles/Downloads/sudocrosh/minioverride.so -shared
+mkdir -p /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/
+curl -L https://raw.githubusercontent.com/shadowed1/sudoCrosh/main/minioverride.c -o /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.c
+gcc /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.c -o /home/chronos/user/MyFiles/Downloads/.config/shadowed1/sudocrosh/minioverride.so -shared
