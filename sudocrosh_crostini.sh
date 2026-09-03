@@ -12,9 +12,9 @@ sudo apt update
 sudo apt install -y gcc
 
 if [ -d /mnt/shared/MyFiles/Downloads ]; then
-    SUDOCROSH="/mnt/shared/MyFiles/Downloads/sudocrosh"
+    SUDOCROSH="/mnt/shared/MyFiles/Downloads/.sudocrosh"
 elif [ -d /mnt/chromeos/MyFiles/Downloads ]; then
-    SUDOCROSH="/mnt/chromeos/MyFiles/Downloads/sudocrosh"
+    SUDOCROSH="/mnt/chromeos/MyFiles/Downloads/.sudocrosh"
 else
     echo "${RED}Downloads directory not found${RESET}"
     sleep 5
